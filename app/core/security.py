@@ -1,1 +1,1 @@
-#Jwt and hash(not shure i will use it, but for now i like this module)
+#Jwt and hash(not sure i will use it, but for now i like this module)
