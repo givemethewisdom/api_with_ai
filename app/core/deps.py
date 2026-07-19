@@ -1,4 +1,5 @@
 """Dependencies for app from core"""
 from app.core.config import Settings
 
-setings = Settings()
+# Глобальный объект настроек
+settings = Settings()

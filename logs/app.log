@@ -1,0 +1,208 @@
+2026-07-19 12:08:03 - app.core.logger_config - root() - ERROR - awda
+2026-07-19 12:08:04 - app.core.logger_config - root() - ERROR - awda
+2026-07-19 13:01:02 - app.middlwares.error_handlers - global_exception_handler() - ERROR - Unhandled exception: ValidationError.__new__() missing 1 required positional argument: 'line_errors'
+2026-07-19 13:01:02 - app.middlwares.error_handlers - global_exception_handler() - ERROR - Traceback (most recent call last):
+  File "E:\proj_pyt\ai_api\.venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "E:\proj_pyt\ai_api\.venv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "E:\proj_pyt\ai_api\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "E:\proj_pyt\ai_api\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "E:\proj_pyt\ai_api\.venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "E:\proj_pyt\ai_api\.venv\Lib\site-packages\starlette\routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "E:\proj_pyt\ai_api\.venv\Lib\site-packages\fastapi\routing.py", line 2685, in app
+    await route.handle(scope, receive, send)
+  File "E:\proj_pyt\ai_api\.venv\Lib\site-packages\fastapi\routing.py", line 1267, in handle
+    await super().handle(scope, receive, send)
+  File "E:\proj_pyt\ai_api\.venv\Lib\site-packages\starlette\routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "E:\proj_pyt\ai_api\.venv\Lib\site-packages\fastapi\routing.py", line 151, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "E:\proj_pyt\ai_api\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "E:\proj_pyt\ai_api\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "E:\proj_pyt\ai_api\.venv\Lib\site-packages\fastapi\routing.py", line 137, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "E:\proj_pyt\ai_api\.venv\Lib\site-packages\fastapi\routing.py", line 474, in app
+    solved_result = await solve_dependencies(
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\proj_pyt\ai_api\.venv\Lib\site-packages\fastapi\dependencies\utils.py", line 706, in solve_dependencies
+    ) = await request_body_to_args(  # body_params checked above
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\proj_pyt\ai_api\.venv\Lib\site-packages\fastapi\dependencies\utils.py", line 981, in request_body_to_args
+    v_, errors_ = _validate_value_with_model_field(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\proj_pyt\ai_api\.venv\Lib\site-packages\fastapi\dependencies\utils.py", line 746, in _validate_value_with_model_field
+    return field.validate(value, values, loc=loc)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\proj_pyt\ai_api\.venv\Lib\site-packages\fastapi\_compat\v2.py", line 182, in validate
+    self._type_adapter.validate_python(value, from_attributes=True),
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\proj_pyt\ai_api\.venv\Lib\site-packages\pydantic\type_adapter.py", line 441, in validate_python
+    return self.validator.validate_python(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\proj_pyt\ai_api\app\domain\shemas\auth_shemas.py", line 24, in validate_email
+    raise ValidationError('awdaw')
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: ValidationError.__new__() missing 1 required positional argument: 'line_errors'
+
+2026-07-19 13:16:04 - app.middlwares.error_handlers - global_exception_handler() - ERROR - Unhandled exception: No active exception to reraise
+2026-07-19 13:16:04 - app.middlwares.error_handlers - global_exception_handler() - ERROR - Traceback (most recent call last):
+  File "E:\proj_pyt\ai_api\.venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "E:\proj_pyt\ai_api\.venv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "E:\proj_pyt\ai_api\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "E:\proj_pyt\ai_api\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "E:\proj_pyt\ai_api\.venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "E:\proj_pyt\ai_api\.venv\Lib\site-packages\starlette\routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "E:\proj_pyt\ai_api\.venv\Lib\site-packages\fastapi\routing.py", line 2685, in app
+    await route.handle(scope, receive, send)
+  File "E:\proj_pyt\ai_api\.venv\Lib\site-packages\fastapi\routing.py", line 1267, in handle
+    await super().handle(scope, receive, send)
+  File "E:\proj_pyt\ai_api\.venv\Lib\site-packages\starlette\routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "E:\proj_pyt\ai_api\.venv\Lib\site-packages\fastapi\routing.py", line 151, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "E:\proj_pyt\ai_api\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "E:\proj_pyt\ai_api\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "E:\proj_pyt\ai_api\.venv\Lib\site-packages\fastapi\routing.py", line 137, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "E:\proj_pyt\ai_api\.venv\Lib\site-packages\fastapi\routing.py", line 474, in app
+    solved_result = await solve_dependencies(
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\proj_pyt\ai_api\.venv\Lib\site-packages\fastapi\dependencies\utils.py", line 706, in solve_dependencies
+    ) = await request_body_to_args(  # body_params checked above
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\proj_pyt\ai_api\.venv\Lib\site-packages\fastapi\dependencies\utils.py", line 981, in request_body_to_args
+    v_, errors_ = _validate_value_with_model_field(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\proj_pyt\ai_api\.venv\Lib\site-packages\fastapi\dependencies\utils.py", line 746, in _validate_value_with_model_field
+    return field.validate(value, values, loc=loc)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\proj_pyt\ai_api\.venv\Lib\site-packages\fastapi\_compat\v2.py", line 182, in validate
+    self._type_adapter.validate_python(value, from_attributes=True),
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\proj_pyt\ai_api\.venv\Lib\site-packages\pydantic\type_adapter.py", line 441, in validate_python
+    return self.validator.validate_python(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\proj_pyt\ai_api\app\domain\shemas\auth_shemas.py", line 24, in validate_email
+    raise
+RuntimeError: No active exception to reraise
+
+2026-07-19 13:26:02 - app.middlwares.error_handlers - business_logic_error_handler() - ERROR - Business logic error | Field: email | Message: not allowed email | Details: {'input': 'masil.ru', 'allowed emails': ['mail.ru', 'gmail']} | Path: /
+2026-07-19 13:30:30 - app.middlwares.error_handlers - business_logic_error_handler() - ERROR - Business logic error | Field: email | Message: not allowed email | Details: {'input': 'stringstri', 'allowed emails': ['mail.ru', 'gmail']} | Path: /awdaw
+2026-07-19 13:32:44 - app.middlwares.error_handlers - business_logic_error_handler() - ERROR - Business logic error | Field: awd@msail.ru | Message: not allowed email | Details: {'input': 'msail.ru', 'allowed emails': ['mail.ru', 'gmail']} | Path: /awdaw
+2026-07-19 18:05:27 - app.middlwares.error_handlers - business_logic_error_handler() - ERROR - Business logic error | Field: email | Message: not allowed email | Details: {'input': 'stringstri', 'allowed emails': ['mail.ru', 'gmail']} | Path: /awdaw
+2026-07-19 18:13:02 - app.middlwares.error_handlers - business_logic_error_handler() - ERROR - Business logic error | Field: email | Message: not allowed email | Details: {'input': 'stringstri', 'allowed emails': ['mail.ru', 'gmail']} | Path: /auth/register
+2026-07-19 18:14:30 - app.middlwares.error_handlers - business_logic_error_handler() - ERROR - Business logic error | Field: email | Message: not allowed email | Details: {'input': 'stringstri', 'allowed emails': ['mail.ru', 'gmail']} | Path: /auth/register/{as}
+2026-07-19 18:16:40 - app.middlwares.error_handlers - business_logic_error_handler() - ERROR - Business logic error | Field: email | Message: not allowed email | Details: {'input': 'stringstri', 'allowed emails': ['mail.ru', 'gmail']} | Path: /auth/register
+2026-07-19 18:57:32 - app.middlwares.error_handlers - business_logic_error_handler() - ERROR - Business logic error | Field: email | Message: not allowed email | Details: {'input': 'stringstri', 'allowed emails': ['mail.ru', 'gmail']} | Path: /auth/register
+2026-07-19 18:57:35 - app.middlwares.error_handlers - business_logic_error_handler() - ERROR - Business logic error | Field: email | Message: not allowed email | Details: {'input': 'stringstri', 'allowed emails': ['mail.ru', 'gmail']} | Path: /auth/register
+2026-07-19 18:57:35 - app.middlwares.error_handlers - business_logic_error_handler() - ERROR - Business logic error | Field: email | Message: not allowed email | Details: {'input': 'stringstri', 'allowed emails': ['mail.ru', 'gmail']} | Path: /auth/register
+2026-07-19 19:21:20 - app.middlwares.error_handlers - business_logic_error_handler() - ERROR - Business logic error | Field: email | Message: not allowed email | Details: {'input': 'stringstri', 'allowed emails': ['mail.ru', 'gmail']} | Path: /auth/register
+2026-07-19 19:21:33 - app.middlwares.error_handlers - global_exception_handler() - ERROR - Unhandled exception: 'Settings' object has no attribute 'SECRET_KEY'
+2026-07-19 19:21:33 - app.middlwares.error_handlers - global_exception_handler() - ERROR - Traceback (most recent call last):
+  File "E:\proj_pyt\ai_api\.venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "E:\proj_pyt\ai_api\.venv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "E:\proj_pyt\ai_api\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "E:\proj_pyt\ai_api\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "E:\proj_pyt\ai_api\.venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "E:\proj_pyt\ai_api\.venv\Lib\site-packages\starlette\routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "E:\proj_pyt\ai_api\.venv\Lib\site-packages\fastapi\routing.py", line 2685, in app
+    await route.handle(scope, receive, send)
+  File "E:\proj_pyt\ai_api\.venv\Lib\site-packages\fastapi\routing.py", line 1766, in handle
+    await self.original_router.handle(scope, receive, send)
+  File "E:\proj_pyt\ai_api\.venv\Lib\site-packages\fastapi\routing.py", line 2740, in handle
+    await included_router._handle_selected(scope, receive, send)
+  File "E:\proj_pyt\ai_api\.venv\Lib\site-packages\fastapi\routing.py", line 1786, in _handle_selected
+    await original_route.handle(scope, receive, send)
+  File "E:\proj_pyt\ai_api\.venv\Lib\site-packages\fastapi\routing.py", line 1265, in handle
+    await app(scope, receive, send)
+  File "E:\proj_pyt\ai_api\.venv\Lib\site-packages\fastapi\routing.py", line 151, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "E:\proj_pyt\ai_api\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "E:\proj_pyt\ai_api\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "E:\proj_pyt\ai_api\.venv\Lib\site-packages\fastapi\routing.py", line 137, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "E:\proj_pyt\ai_api\.venv\Lib\site-packages\fastapi\routing.py", line 691, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\proj_pyt\ai_api\.venv\Lib\site-packages\fastapi\routing.py", line 345, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\proj_pyt\ai_api\app\endpoints\auth\auth.py", line 13, in register
+    logger.info(settings.SECRET_KEY)
+                ^^^^^^^^^^^^^^^^^^^
+  File "E:\proj_pyt\ai_api\.venv\Lib\site-packages\pydantic\main.py", line 1042, in __getattr__
+    raise AttributeError(f'{type(self).__name__!r} object has no attribute {item!r}')
+AttributeError: 'Settings' object has no attribute 'SECRET_KEY'
+
+2026-07-19 19:38:18 - app.middlwares.error_handlers - global_exception_handler() - ERROR - Unhandled exception: 'Settings' object has no attribute 'SECRET_KEY'
+2026-07-19 19:38:18 - app.middlwares.error_handlers - global_exception_handler() - ERROR - Traceback (most recent call last):
+  File "E:\proj_pyt\ai_api\.venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "E:\proj_pyt\ai_api\.venv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "E:\proj_pyt\ai_api\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "E:\proj_pyt\ai_api\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "E:\proj_pyt\ai_api\.venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "E:\proj_pyt\ai_api\.venv\Lib\site-packages\starlette\routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "E:\proj_pyt\ai_api\.venv\Lib\site-packages\fastapi\routing.py", line 2685, in app
+    await route.handle(scope, receive, send)
+  File "E:\proj_pyt\ai_api\.venv\Lib\site-packages\fastapi\routing.py", line 1766, in handle
+    await self.original_router.handle(scope, receive, send)
+  File "E:\proj_pyt\ai_api\.venv\Lib\site-packages\fastapi\routing.py", line 2740, in handle
+    await included_router._handle_selected(scope, receive, send)
+  File "E:\proj_pyt\ai_api\.venv\Lib\site-packages\fastapi\routing.py", line 1786, in _handle_selected
+    await original_route.handle(scope, receive, send)
+  File "E:\proj_pyt\ai_api\.venv\Lib\site-packages\fastapi\routing.py", line 1265, in handle
+    await app(scope, receive, send)
+  File "E:\proj_pyt\ai_api\.venv\Lib\site-packages\fastapi\routing.py", line 151, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "E:\proj_pyt\ai_api\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "E:\proj_pyt\ai_api\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "E:\proj_pyt\ai_api\.venv\Lib\site-packages\fastapi\routing.py", line 137, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "E:\proj_pyt\ai_api\.venv\Lib\site-packages\fastapi\routing.py", line 691, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\proj_pyt\ai_api\.venv\Lib\site-packages\fastapi\routing.py", line 345, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\proj_pyt\ai_api\app\endpoints\auth\auth.py", line 13, in register
+    logger.info(settings.SECRET_KEY)
+                ^^^^^^^^^^^^^^^^^^^
+  File "E:\proj_pyt\ai_api\.venv\Lib\site-packages\pydantic\main.py", line 1042, in __getattr__
+    raise AttributeError(f'{type(self).__name__!r} object has no attribute {item!r}')
+AttributeError: 'Settings' object has no attribute 'SECRET_KEY'
+
